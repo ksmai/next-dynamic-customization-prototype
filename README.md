@@ -73,6 +73,8 @@ Note that the editor is also able to load and preview the custom components if w
 - [ ] load `components` and `overrideScript` from database
 - [ ] enable minification of the `overrideScript`
 - [ ] setup something like a storybook to help develop the overrideScripts before they are actually deployed and used by `core-app`
+- [ ] allow built-in / custom components to opt out of rehydration
+- [ ] use overrideScript mechanism to build common themes
 
 ## Demo
 
