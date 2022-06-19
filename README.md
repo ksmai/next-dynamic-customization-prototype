@@ -68,6 +68,14 @@ Note that the editor is also able to load and preview the custom components if w
 - [ ] enable minification of the `overrideScript`
 - [ ] setup something like a storybook to help develop the overrideScripts before they are actually deployed and used by `core-app`
 
+## Demo
+
+The demo app has been deployed to https://next-dynamic-customization-prototype.vercel.app/
+
+To try it out, first click on `Go to edit` to use the editor. If this is the first time the editor is used, it will prefill some valid `components` data. Simply press `save` and `Go back to website` to view the page.
+
+Note that `Component1`, `Component2` and `Component3` are built-in components. `overrides1.js` contains 2 new components called `ExampleOverride` and `ExampleWithMui`. It also replaces `Component3` with its own implementation. To be able to view these overriden components, simply add the query string `?filename=overrides1.js` so that it will load the file from https://ksmai.github.io/next-dynamic-customization-prototype/overrides1.js
+
 ## License
 
 MIT
