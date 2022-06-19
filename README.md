@@ -4,7 +4,7 @@
 
 ## Context
 
-In today's SAAS world, a single codebase often needs to serve websites for many different customers, for example, online ecommerce stores like Shopify or Wix. However, different customers often have different customization requirements. While ordinary customers are usually satisfied with the ability to choose from a pre-built list of templates, components and configuration options, enterprise customers will look for tweaking the finest details in order to obtain a truly unique brand experience.
+In today's SAAS world, a single codebase is often used serve websites for many different customers. Examples include online ecommerce stores like Shopify or Wix. However, different customers often have different customization requirements. While ordinary customers are usually satisfied with the ability to choose from a pre-built list of templates, components and configuration options, enterprise customers will look for tweaking the finest details in order to obtain a truly unique brand experience.
 
 The problem therefore is how we can support such dynamic customizations in a maintainable and scalable way. Traditionally, this has been done in a few different ways:
 
@@ -16,6 +16,12 @@ The problem therefore is how we can support such dynamic customizations in a mai
 
    This works well when there are only a handful of customers but quickly get out of control as we continue to punch in various unrelated customizations everywhere in the codebase. It also gives a runtime penalty to other customers that do not need the specific customizations.
 
+3. Load a user provided configuration file at runtime
+
+   Traditionally, this only allows for very simple customizations like page titles and button colors. It is difficult to allow for very flexible layout configurations and look-and-feel customizations without making the configuration options extremely convoluted.
+   
+   However, [Snipcart](https://docs.snipcart.com/v3/setup/customization) took this approach to the next level by allowing their users to provide custom Vue components in a separate html file. This is an interesting idea that we are going to try to incoporate into this prototype.
+   
 ## Technology
 
 We will use next.js to build this prototype. It is a popular server side rendering framework based on React, which has a big ecosystem and community support and allows us to write clean component based code.
